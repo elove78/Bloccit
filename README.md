@@ -4,6 +4,8 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
+Heroku app is named: [love-my-bloccit](http://love-my-bloccit.herokuapp.com).
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
