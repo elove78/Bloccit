@@ -38,6 +38,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # bootstrap sass
 gem 'bootstrap-sass'
 
+#Rails ERD plugin
+group :development do
+  gem "rails-erd"
+end
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
