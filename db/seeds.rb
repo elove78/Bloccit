@@ -1,4 +1,21 @@
 require 'faker'
+
+unique_post = { 
+      title: "This is final test that i did in the last hour",
+      body: "blah blah"
+    }
+
+Post.find_or_create_by(unique_post)
+
+
+
+unique_comment = {
+  body: "blah try 1 2 3"
+}
+
+
+Post.find_or_create_by(unique_comment)
+
  
  # Create Posts
  50.times do
