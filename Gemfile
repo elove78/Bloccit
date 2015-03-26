@@ -16,6 +16,9 @@ group :production do
  end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+# bootstrap sass
+gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -25,12 +28,11 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# faker Gem 
-gem 'faker'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+
+
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,10 +44,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # pry rails
 gem 'pry-rails', :group => :development
 
-
-
-# bootstrap sass
-gem 'bootstrap-sass'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -62,5 +60,10 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # faker Gem 
+  gem 'faker'
+  # Authentication system
+  gem 'devise'
 end
 
