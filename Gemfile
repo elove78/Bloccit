@@ -69,5 +69,7 @@ end
   gem 'faker'
   # Authentication system
   gem 'devise'
+  # Pundit Gem helps setup user roles and tasks.
+  gem 'pundit'
 
 
