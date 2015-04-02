@@ -1,5 +1,5 @@
 class PostPolicy < ApplicationPolicy
-  class Scope
+  class Scope < Scope
     attr_reader :user, :scope
 
     def initialize(user, scope)
@@ -8,18 +8,21 @@ class PostPolicy < ApplicationPolicy
     end
 
     def resolve
-      if user.admin? || user.moderator? 
+      if @user && (user.role == 'admin' || user.role == 'moderator')
         scope.all
-      elsif user.owner_of?(post)
-        scope.self
       else
-        false
+        scope.where(user: true)
       end
     end
   end
 
+  def index?
+    @user && (user.role == 'admin' || user.role == 'moderator' || user.present?)
+  end
 
-
+  def show
+    @post = Post.find(params[:id])
+  end
 
 
 end

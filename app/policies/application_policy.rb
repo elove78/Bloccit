@@ -1,4 +1,5 @@
 class ApplicationPolicy
+
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -7,7 +8,7 @@ class ApplicationPolicy
   end
 
   def index?
-    false
+    user.role == 'admin' || user.role == 'moderator' || user.present?
   end
 
   def show?
