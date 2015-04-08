@@ -1,0 +1,17 @@
+<h1> This is the Current Summary You are looking at</h1>
+
+<% if policy(@summary).update? %>
+  <%= link_to "Edit Summary", edit_summary_path, class: 'btn btn-success' %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead"><%= @summary.description %></p><br/>
+    <%= link_to @summary.post.title %>
+  </div>
+  <div class="col-md-4">
+    <% if policy(@summary).edit? %>
+      <%= link_to "Update Summary", edit_summary_path(@post), class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

@@ -31,7 +31,6 @@ class PostsController < ApplicationController
 
       def update
         @topic = Topic.find(params[:topic_id])
-        @post = Post.find(params[:id])
           authorize @post
         if @post.update_attributes(params.require(:post).permit(:title, :body))
           flash[:notice] = "Post was updated."

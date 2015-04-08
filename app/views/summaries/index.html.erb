@@ -1,0 +1,15 @@
+<h1>Summaries</h1>
+
+  <% if policy(Summary.new).create? %>
+  <%= link_to "New Summary", new_summary_path, class: 'btn btn-success' %>
+  <% end %>
+
+<% @summaries.each do |summary| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to summary.description, summary %>
+      </h4>
+    </div>
+  </div>
+<% end %>
